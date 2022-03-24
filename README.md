@@ -2,7 +2,31 @@
 
 **Ukázky a návody jak pracovat  snástrojem RobotFramework.**
 
-## Začínáme
+## TL;DR
+
+Chci si vše udělat sám.
+
+```
+mkdir robotframework-demo
+cd .\robotframework-demo\
+```
+
+Chci začít s tímto repozitářem.
+
+```
+git clone https://github.com/groundf/course-robotframework.git
+```
+
+A dále již pokračujeme instalací balíků a spuštěním testů.
+
+```
+py -m venv --upgrade-deps .venv
+pip install -U robotframework robotframework-seleniumlibrary webdrivermanager
+webdrivermanager chrome
+robot --outputdir .\output\ .\browser-test.robot
+```
+
+## Začínáme (podrobně)
 
 RobotFramework se instaluje jako Python balík pomocí nástroje `pip`. Potřebujeme mít tedy funkční instalací Pythonu, což můžeme na operačním systému Windows ověřit pomocí nástroje `py.exe`.
 
@@ -29,7 +53,7 @@ RobotFramework můžeme instalovat buď globálně nebo do virtuálního prostř
 py -m venv --upgrade-deps .venv
 ```
 
-Aktivujeme si virtuální prostředí.
+Aktivujeme si virtuální prostředí. Prefix `(.venv)` značí, že máme aktivováno. Pro deaktivaci stčí kdykoliv napsat `deactivate` (více o virtuálním prostředí na vyžádání).
 
 ```
 .\.venv\Scripts\activate

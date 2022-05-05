@@ -1,25 +1,25 @@
-# Robotframework
+# Robot Framework
 
-**Ukázky a návody jak pracovat  snástrojem RobotFramework.**
+**Návod a ukázky práce s nástrojem RobotFramework.**
 
 ## TL;DR
 
-Chci si vše udělat sám.
+### Chci si vše vytvořit sám
 
-```
+```powershell
 mkdir robotframework-demo
 cd .\robotframework-demo\
 ```
 
-Chci začít s tímto repozitářem.
+### Chci začít s tímto repozitářem
 
-```
+```powershell
 git clone https://github.com/groundf/course-robotframework.git
 ```
 
 A dále již pokračujeme instalací balíků a spuštěním testů.
 
-```
+```powershell
 py -m venv --upgrade-deps .venv
 pip install -U robotframework robotframework-seleniumlibrary webdrivermanager
 webdrivermanager chrome
@@ -35,7 +35,7 @@ RobotFramework se instaluje jako Python balík pomocí nástroje `pip`. Potřebu
 
 Můžeme tedy vytvořt adresář pro náše testy a přemístit se do něj.
 
-```
+```powershell
 mkdir robotframework-demo
 
     Directory: C:\Users\dlanda\Projects\Bussines
@@ -49,19 +49,19 @@ cd .\robotframework-demo\
 
 RobotFramework můžeme instalovat buď globálně nebo do virtuálního prostředí, kde druhé je bezpečnější! Proto si vytvoříme virtuální protředí pomocí balíku `venv`, který je součástí Python instalace.
 
-```
+```powershell
 py -m venv --upgrade-deps .venv
 ```
 
 Aktivujeme si virtuální prostředí. Prefix `(.venv)` značí, že máme aktivováno. Pro deaktivaci stčí kdykoliv napsat `deactivate` (více o virtuálním prostředí na vyžádání).
 
-```
+```powershell
 .\.venv\Scripts\activate
 ```
 
 A nyní již naistalujeme potřebné balíky.
 
-```
+```powershell
 (.venv) pip install -U robotframework
 (.venv) pip install -U robotframework-seleniumlibrary
 (.venv) pip install -U webdrivermanager
@@ -69,7 +69,7 @@ A nyní již naistalujeme potřebné balíky.
 
 Předchozí lze zapsat také úsporně na jeden řádek.
 
-```
+```powershell
 (.venv) pip install -U robotframework robotframework-seleniumlibrary webdrivermanager
 ```
 
@@ -77,7 +77,7 @@ Naistalovali jsme kromě samotnéhe balíku `robotframework` také rozšiřujíc
 
 V zásade lze každý ovladač stáhnout a vložit do cesty tzn. do proměnné `PATH`. Toto vše ale udělá `webdrivermanager` za nás. Stačí ho jen zavolat před samostným spuštěním testů -- stačí pouze jednou.
 
-```
+```powershell
 (.venv) webdrivermanager chrome
 
 Downloading WebDriver for browser: "chrome"
